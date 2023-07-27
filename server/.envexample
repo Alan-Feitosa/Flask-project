@@ -1,0 +1,4 @@
+DATABASE_URI="mysql://seunome:suasenha@localhost:3306/seubancodedados" pode ser usado para qualquer banco de dados
+FLASK_CONFIG="development" você pode configurar na config.py
+FLASK_APP="server.py" nome que vai rodar a sua aplicação flask
+FLASK_DEBUG=(0 or 1)
