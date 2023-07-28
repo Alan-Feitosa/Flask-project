@@ -2,6 +2,8 @@ version: '3'
 services:
   web:
     build: .
+    ports:
+      - 8090:8090
     volumes:
       - .:/home/python/app
     depends_on:
@@ -9,11 +11,10 @@ services:
   db:
     image: mysql:8.0.34
     environment:
-      MYSQL_ROOT_PASSWORD: mysecretpassword
-      MYSQL_DATABASE: hospitaldatabase
-      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: May3810*
+      MYSQL_DATABASE: Hospital
+      MYSQL_USER: alan
       MYSQL_PASSWORD: root123
-    volumes:
-      - mysql-data:/var/lib/mysql
-volumes:
-  mysql-data:
+      DATABASE_URI: mysql://alan:root123@localhost:3306/Hospital
+    # volumes:
+    #   - mysql-data:/var/lib/mysql

@@ -5,6 +5,8 @@ RUN useradd -ms /bin/bash python
 
 RUN pip install pipenv
 
+RUN pip install -r requirements.txt
+
 USER python
 
 # Defina o diretório de trabalho como /app
