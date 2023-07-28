@@ -1,8 +1,10 @@
+import os
+
 class Config:
     SECRET_KEY = "ALFAJKF"
 
 class DevelopmentConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI=os.getenv('DATABASE_URI')
 
 config = {
     "development": DevelopmentConfig,

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-// import About from './pages/About';
 import Login from './pages/Login';
 import Footer from './components/Footer';
 
@@ -16,7 +15,7 @@ const App = () => {
         <Route path="/login" element={ <Login />} />
         {/* Adicione mais rotas para outras páginas aqui */}
         </Routes>
-        <Footer />
+      <Footer />
     </Router>
   );
 };

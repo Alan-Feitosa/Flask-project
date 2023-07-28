@@ -51,7 +51,7 @@ function Login(){
                 </div>
                 <button className="text-gray-500 text-sm mt-2" type="button">Não tem um login?</button>
             </div>
-            </div>
+        </div>
     </main>
   )
 }

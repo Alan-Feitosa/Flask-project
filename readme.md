@@ -19,6 +19,8 @@ pip3 --version
 
 ## Instalações
 
+pip3 flask_cors
+pip3 python-dotenv 
 pip3 wtforms
 pip3 flask
 pip3 flask_login
