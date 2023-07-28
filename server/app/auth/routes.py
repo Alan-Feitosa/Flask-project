@@ -1,8 +1,11 @@
+from flask import jsonify
 from app.auth import auth
 
-@auth.route("/login", methods=["POST", "GET"])
+@auth.route("/api/login", methods=["POST", "GET"])
 def login():
-    return "Usuário ou senha inválidos"
+    return jsonify({
+        'message': "Faça seu login aqui"
+    })
 
 
 @auth.route("/registro", methods=["GET", "POST"])

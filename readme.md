@@ -1,9 +1,11 @@
 ## Flask Hospital
 
+Flask com ReactJS, Dockerfile configurado para rodar e .env example
+
 Projeto desenvolvido com o professor de Python da DevStars
 
 ## Instruções
-Você precisa instalar dependencias no seu PC para rodar esse projeto, então cerfitifique-se que o pip está instalado na sua maquina e que o python3 também. Eu utilizei o Ubuntu para instalar.
+Você precisa instalar dependencias no seu PC para rodar esse projeto, então cerfitifique-se que o pip está instalado na sua maquina e que o python3 também. Eu utilizei o Ubuntu para instalar. (lembrando que você precisa do reactJS e o MongoDB instalando também)
 
 sudo apt-get update
 sudo apt-get install python3
