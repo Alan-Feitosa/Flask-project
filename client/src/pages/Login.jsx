@@ -11,11 +11,11 @@ import React, {useEffect, useState} from "react";
 //       setMessage(data.message)
 //     })
 //   })
+// }
 
 function Login(){
   return(
     <main>
-        {/* <div>{message}</div> */}
         <div className="flex items-center justify-center h-screen">
             <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md flex flex-col items-center">
                 <h2 className="text-2xl font-bold mb-4 text-black">Login</h2>
