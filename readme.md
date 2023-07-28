@@ -16,6 +16,8 @@ caso você acha que tem instalado apenas faça o seguinte comando no terminal
 python3 --version
 pip3 --version
 
+Utilizar flask db init, flask db migrate, flask db upgrade
+
 
 ## Instalações
 
