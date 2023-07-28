@@ -24,3 +24,8 @@ class Usuario(db.Model):
 
     def verifica_senha(self, valor):
         return check_password_hash(self.senha_hash, valor)
+    
+class Doutores(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(32), nullable=False)
+    cpf = db.Column(db.String(11), nullable=False, unique=True)

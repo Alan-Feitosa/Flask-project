@@ -11,5 +11,3 @@ def login():
 @auth.route("/registro", methods=["GET", "POST"])
 def registro():
     return "Usuario Cadastrado com Sucesso"
-
-
