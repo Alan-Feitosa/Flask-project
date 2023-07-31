@@ -1,22 +1,32 @@
 import React, { useState } from "react";
-import axios from 'axios';
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [message, setMessage] = useState('');
-  
-    const handleLogin = async (e) => {
-      e.preventDefault();
-  
-      try {
-        const response = await axios.post('http://localhost:3010/login', { email, senha: password });
-        setMessage(response.data.message);
-        // Se a resposta for bem-sucedida, você pode redirecionar o usuário para a próxima página aqui
-      } catch (error) {
-        setMessage('Email ou senha inválidos');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      setMessage(data.message);
+
+      if (response.ok) {
+        // Login bem-sucedido, fazer ações necessárias, como redirecionamento.
       }
-    };
+    } catch (error) {
+      console.error('Erro ao fazer login:', error);
+      setMessage('Erro ao fazer login. Verifique o console para detalhes.');
+    }
+  }
+
 
   return(
     <main>

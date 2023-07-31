@@ -3,7 +3,7 @@ from app.models import Usuario
 from app.auth import auth
 from .forms import LoginForm
 
-@auth.route('/login', methods=['GET', 'POST'])
+@auth.route('/api/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
 

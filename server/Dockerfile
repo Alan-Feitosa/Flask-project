@@ -1,19 +1,14 @@
-# Use a imagem base Python
 FROM python:3.10.6-slim
 
-RUN useradd -ms /bin/bash python
+WORKDIR /home/python/app
 
-RUN pip install pipenv
+COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
 
 USER python
 
-# Defina o diretório de trabalho como /app
-WORKDIR /home/python/app
-
 ENV PIP_ENV_VENV_IN_PROJECT=True
 
-# Comando para iniciar o aplicativo quando o contêiner é iniciado
 CMD [ "tail", "-f", "/dev/null"]
 
